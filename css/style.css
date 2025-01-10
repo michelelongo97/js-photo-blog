@@ -13,6 +13,7 @@
 body {
     height: 100vh;
     font-family: "Edu TAS Beginner", serif;
+    background-image: url("../img/cork.png");
 }
 
 /*----------------
@@ -21,6 +22,7 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
+    max-width: 999px;
 }
 
 .row {
@@ -45,18 +47,13 @@ header h1{
 /*----------------
     MAIN
 ------------------*/
-main{
-    background-image: url("../img/cork.png");
-    min-height: 1000px;
-}
-
 .row .col{
     /*width: calc(100% /3);*/
     margin: 20px 0;
     text-align: center;
-    justify-content: space-around;
     background-color: white;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 p{
@@ -80,5 +77,5 @@ p{
 
 .pin{
     position: absolute;
-    left: 100px;
+    left: 110px;
 }
