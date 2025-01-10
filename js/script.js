@@ -16,4 +16,15 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
         </div>
         `;
     })
+
+    const cards = document.querySelectorAll(".col")
+    
+    cards.forEach((card) => {
+
+        card.addEventListener("click", () => {
+            const cardImage = card.querySelector("p").innerHTML;
+            console.log(cardImage);
+        })
+    })
 });
+
