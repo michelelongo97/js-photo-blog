@@ -1,4 +1,6 @@
 const postListsElm = document.getElementById("post-lists");
+const hiddenElm = document.querySelector(".hidden");
+const closeBtnElm = document.querySelector(".close-btn");
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => {
     const posts = res.data;
@@ -22,9 +24,15 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
     cards.forEach((card) => {
 
         card.addEventListener("click", () => {
-            const cardImage = card.querySelector("p").innerHTML;
+            const cardImage = card.querySelector(".photo").getAttribute('src');
+            hiddenElm.classList.remove("hidden");
             console.log(cardImage);
         })
     })
 });
+
+closeBtnElm.addEventListener("click", () =>{
+    hiddenElm.classList.add("hidden");
+});
+
 
