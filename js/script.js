@@ -10,7 +10,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
         <div class="col">
             <div>
                 <img class="pin" src="./img/pin.svg">
-                <img class="photo" src="${post.url}"> 
+                <img class="photo" src="${post.url}" alt="${post.title}">
             </div>
             <div class="text-card">
                 <p>${post.title}</p>
@@ -25,6 +25,9 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
 
         card.addEventListener("click", () => {
             const cardImage = card.querySelector(".photo").getAttribute('src');
+            const overlayImage = hiddenElm.querySelector(".overlay-image");
+
+            overlayImage.src = cardImage;
             hiddenElm.classList.remove("hidden");
             console.log(cardImage);
         })
