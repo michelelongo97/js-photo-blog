@@ -48,12 +48,14 @@ header h1{
     MAIN
 ------------------*/
 .row .col{
-    /*width: calc(100% /3);*/
+    max-width: 250px;
     margin: 20px 0;
     text-align: center;
     background-color: white;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, cursor 0.3s ease;
+    cursor: pointer;
 }
 
 p{
@@ -65,6 +67,12 @@ p{
     margin: 20px 0;
     width: 220px;
     height: 220px;
+    
+}
+
+.row .col:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.9);
 }
 
 .text-card{
